@@ -7,8 +7,8 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\eric$/;
   var botRegex2 = /^\Eric$/;
-  var botRegex3 = /^\God damn$/;
-  var botRegex4 = /^\god damn$/;
+  var botRegex3 = /^\anime$/;
+  var botRegex4 = /^\Anime$/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
