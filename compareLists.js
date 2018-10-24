@@ -4,4 +4,4 @@
 };*/
 
 
-export captureCompare = [/^\reg$/];
+export var captureCompare = [/^\reg$/];
