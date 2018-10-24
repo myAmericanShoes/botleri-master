@@ -1,4 +1,4 @@
-import { captureCompare } from './compareLists.js';
+import { captureCompare } from '/compareLists.js';
 
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
