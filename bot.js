@@ -4,7 +4,7 @@
 //____Supported_Triggers____//
 
 const captureCompare = [/^\eric$/, /^\Eric$/, /^\overlord$/, /^\Overlord$/, /^\\reg$/, /^\\status$/, /^\@Eric$/];
-const responseGrid = ["God damn", "God damn", "overlord", "overlord", "reg", "status","@God damn"];
+const responseGrid = ["God damn", "God damn", "overlord", "overlord", "reg", "status", "@God damn"];
 var statusFlag = 0;
 var regID = "Bot regID is: 10x24x19xAA";
 
