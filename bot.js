@@ -15,7 +15,7 @@ function respond() {
 
  for (var i = 0; i < compareLists.captureCompare.length; i++) {
 
-    botRegex = /^\+compareLists.captureCompare[i]+$/;
+    botRegex = /^\compareLists.captureCompare[i]$/;
     
     if(request.text && botRegex.test(request.text)) {
     
