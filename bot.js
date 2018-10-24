@@ -1,3 +1,5 @@
+import { compareLists } from "./compareLists.js";
+
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 var regID = "Bot regID is: 10x24x19xAA";
@@ -5,8 +7,6 @@ var regID = "Bot regID is: 10x24x19xAA";
 var botID = process.env.BOT_ID;
 
 function respond() {
-  
-  import { compareLists } from "./compareLists.js";
   
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\eric$/;
@@ -41,7 +41,7 @@ function respond() {
   } else if(request.text && botRegex4.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
-    this.res.end("overlord");
+    this.res.end("/reg");
   } else {
     console.log("don't care");
     this.res.writeHead(200);
