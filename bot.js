@@ -3,10 +3,11 @@
 /****************************/
 //____Supported_Triggers____//
 
-const captureCompare = [/^\eric$/, /^\Eric$/, /^\overlord$/, /^\Overlord$/, /^\\reg$/, /^\\status$/, /^\@Eric$/];
-const responseGrid = ["God damn", "God damn", "overlord", "overlord", "reg", "status", "@God damn"];
-var statusFlag = 0;
 var regID = "Bot regID is: 10x24x19xAA";
+var statusFlag = 0;
+const captureCompare = [/^\eric$/, /^\Eric$/, /^\overlord$/, /^\Overlord$/, /^\\reg$/, /^\\status$/, /^\@Eric$/];
+const responseGrid = ["God damn", "God damn", "Ainz-Sama!", "Ainz-Sama!", regID, "status", "@God damn"];
+
 
 /***************************/
 
@@ -31,7 +32,7 @@ function respond() {
     if(request.text && botRegex.test(request.text)) {
     
       this.res.writeHead(200);
-      postMessage(responseGrid[i]);
+      postMessage(responseGrid[i], i);
       this.res.end();
       i = captureCompare.length;
     }
@@ -61,23 +62,11 @@ function respond() {
   }*/
 }
 
-function postMessage(input) {
+function postMessage(input, index) {
   var botResponse, options, body, botReq;
 
-  botResponse = "God damn";
+  botResponse = responseGrid[index];
   
-  if (input == "overlord") {
-   
-    botResponse = "Ainz-Sama!";
-  }
-  if (input == "reg") {
-    
-    botResponse = regID;
-  }
-  if (input == "@God damn") {
-    
-    botResponse = "@God_damn";
-  }
   if (input == "status") {
     
     if (statusFlag == 0) { botResponse = "Status: CRITICALLY-NORMAL"; }
