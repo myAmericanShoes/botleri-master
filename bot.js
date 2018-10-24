@@ -12,7 +12,7 @@ function respond() {
       botRegex = /^\eric$/;
   var botRegex2 = /^\Eric$/;
   var botRegex3 = /^\overlord$/;
-  var botRegex4 = RegExp(captureCompare[0]);
+  var botRegex4 = captureCompare[0];
 
  /*for (var i = 0; i < compareLists.captureCompare.length; i++) {
 
