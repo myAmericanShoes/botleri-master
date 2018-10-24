@@ -1,4 +1,12 @@
-import { captureCompare } from '/compareLists.js';
+//import { captureCompare } from '/compareLists.js';
+
+/****************************/
+//____Supported_Triggers____//
+
+var captureCompare = [/^\reg$/];
+
+/***************************/
+
 
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
