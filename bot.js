@@ -1,3 +1,5 @@
+//import { colorCode } from "./test.js";
+
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
@@ -7,25 +9,30 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\eric$/;
   var botRegex2 = /^\Eric$/;
-  var botRegex3 = /^\anime$/;
-  var botRegex4 = /^\Anime$/;
+  var botRegex3 = /^\overlord$/;
+  var botRegex4 = /^\Overlord/;
+
+ /* for (var i = 0; i < colorCode.black.length; i++) {
+
+    var botRegex = colorCode.black[i];
+  }*/
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage(" ");
     this.res.end();
   } else if(request.text && botRegex2.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage(" ");
     this.res.end();
   } else if(request.text && botRegex3.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage("overlord");
     this.res.end();
   } else if(request.text && botRegex4.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
-    this.res.end();
+    this.res.end("overlord");
   } else {
     console.log("don't care");
     this.res.writeHead(200);
@@ -33,10 +40,15 @@ function respond() {
   }
 }
 
-function postMessage() {
+function postMessage(input) {
   var botResponse, options, body, botReq;
 
   botResponse = "God damn";
+  
+  if (input == "overlord") {
+   
+      botResponse = "Ainz-Sama!"
+  }
 
   options = {
     hostname: 'api.groupme.com',
