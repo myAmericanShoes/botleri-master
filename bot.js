@@ -3,8 +3,8 @@
 /****************************/
 //____Supported_Triggers____//
 
-const captureCompare = [/^\eric$/, /^\Eric$/, /^\overlord$/, /^\Overlord$/, /^\\reg$/, /^\\status$/];
-const responseGrid = ["God damn", "God damn", "overlord", "overlord", "reg", "status"];
+const captureCompare = [/^\eric$/, /^\Eric$/, /^\overlord$/, /^\Overlord$/, /^\\reg$/, /^\\status$/, /^\@Eric$/];
+const responseGrid = ["God damn", "God damn", "overlord", "overlord", "reg", "status","@God damn"];
 var statusFlag = 0;
 var regID = "Bot regID is: 10x24x19xAA";
 
@@ -73,6 +73,10 @@ function postMessage(input) {
   if (input == "reg") {
     
     botResponse = regID;
+  }
+  if (input == "@God damn") {
+    
+    botResponse = "@God_damn";
   }
   if (input == "status") {
     
