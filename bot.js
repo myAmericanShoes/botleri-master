@@ -14,7 +14,7 @@ function respond() {
   var botRegex3 = /^\overlord$/;
   var botRegex4 = /^\Overlord$/;
   
-  if(request.text && compareLists.captureCompare[0].test(request.text)) {
+  if(request.text && /^\compareLists.captureCompare[0]$/.test(request.text)) {
     
       this.res.writeHead(200);
       postMessage(botRegex);
