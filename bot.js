@@ -3,7 +3,9 @@
 /****************************/
 //____Supported_Triggers____//
 
-const captureCompare = [/^\reg$/;];
+const captureCompare = [/^\eric$/,/^\Eric$/,/^\overlord$/,/^\Overlord$/,/^\\reg$/,/^\\status$/];
+const responseGrid = ["God damn", "God damn", "overlord", "overlord", "reg", "status"];
+var statusFlag = 0;
 
 /***************************/
 
@@ -18,22 +20,24 @@ function respond() {
   
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\eric$/;
-  var botRegex2 = /^\Eric$/;
-  var botRegex3 = /^\overlord$/;
-  var botRegex4 = captureCompare[0];
+  //var botRegex2 = /^\Eric$/;
+  //var botRegex3 = /^\overlord$/;
+  //var botRegex4 = captureCompare[0];
 
- /*for (var i = 0; i < compareLists.captureCompare.length; i++) {
+ for (var i = 0; i < captureCompare.length; i++) {
 
-    botRegex = compareLists.captureCompare[i];
+    botRegex = captureCompare[i];
     
     if(request.text && botRegex.test(request.text)) {
     
       this.res.writeHead(200);
-      postMessage(botRegex);
+      postMessage(responseGrid[i]);
       this.res.end();
+      i = captureCompare.length;
     }
-  }*/
+  }
 
+  /*
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(" ");
@@ -54,7 +58,7 @@ function respond() {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
-  }
+  }*/
 }
 
 function postMessage(input) {
@@ -66,9 +70,14 @@ function postMessage(input) {
    
     botResponse = "Ainz-Sama!"
   }
-  else if (input == "/reg") {
+  if (input == "reg") {
     
     botResponse = regID;
+  }
+  if (input == "status") {
+    
+    if (statusFlag == 0) botResponse = "Status: CRITICALLY-NORMAL";
+    else botResponse = "Status: BAD";
   }
 
   options = {
