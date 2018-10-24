@@ -11,9 +11,9 @@ function respond() {
       botRegex = /^\eric$/;
   var botRegex2 = /^\Eric$/;
   var botRegex3 = /^\overlord$/;
-  var botRegex4 = /^\Overlord/;
+  var botRegex4 = compareLists.captureCompare[0];
 
- for (var i = 0; i < compareLists.captureCompare.length; i++) {
+ /*for (var i = 0; i < compareLists.captureCompare.length; i++) {
 
     botRegex = compareLists.captureCompare[i];
     
@@ -23,7 +23,7 @@ function respond() {
       postMessage(botRegex);
       this.res.end();
     }
-  }
+  }*/
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
