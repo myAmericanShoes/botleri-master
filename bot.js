@@ -6,13 +6,13 @@
 const captureCompare = [/^\eric$/, /^\Eric$/, /^\overlord$/, /^\Overlord$/, /^\reg/, /^\status/];
 const responseGrid = ["God damn", "God damn", "overlord", "overlord", "reg", "status"];
 var statusFlag = 0;
+var regID = "Bot regID is: 10x24x19xAA";
 
 /***************************/
 
 
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-var regID = "Bot regID is: 10x24x19xAA";
 
 var botID = process.env.BOT_ID;
 
