@@ -1,4 +1,4 @@
-import { compareLists } from './compareLists.js';
+import { captureCompare } from './compareLists.js';
 
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
@@ -12,7 +12,7 @@ function respond() {
       botRegex = /^\eric$/;
   var botRegex2 = /^\Eric$/;
   var botRegex3 = /^\overlord$/;
-  var botRegex4 = RegExp('reg');
+  var botRegex4 = RegExp(captureCompare[0]);
 
  /*for (var i = 0; i < compareLists.captureCompare.length; i++) {
 
