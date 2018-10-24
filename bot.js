@@ -69,7 +69,7 @@ function postMessage(input, index) {
   
   if (input == "status") {
     
-    if (statusFlag == 0) { botResponse = "Status: CRITICALLY-NORMAL"; }
+    if (statusFlag == 0) { botResponse = "Status: CRITICALLY-NORMAL, eEt mOr cHicKn"; }
     else { botResponse = "Status: BAD"; }
   }
 
