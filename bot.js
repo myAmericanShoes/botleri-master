@@ -1,5 +1,3 @@
-import { compareLists } from "./compareLists.js";
-
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 var regID = "Bot regID is: 10x24x19xAA";
@@ -7,6 +5,9 @@ var regID = "Bot regID is: 10x24x19xAA";
 var botID = process.env.BOT_ID;
 
 function respond() {
+  
+  import { compareLists } from "./compareLists.js";
+  
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\eric$/;
   var botRegex2 = /^\Eric$/;
