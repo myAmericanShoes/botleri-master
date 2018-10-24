@@ -6,7 +6,7 @@
 var regID = "Bot regID is: 10x24x19xAA";
 var statusFlag = 0;
 const captureCompare = [/^\eric$/, /^\Eric$/, /^\overlord$/, /^\Overlord$/, /^\\reg$/, /^\\status$/, /^\@Eric$/];
-const responseGrid = ["God damn", "God damn", "Ainz-Sama!", "Ainz-Sama!", regID, "status", "@God damn"];
+const responseGrid = ["God damn", "God damn", "Ainz-Sama!", "Ainz-Sama!", regID, "status", "@God_damn"];
 
 
 /***************************/
