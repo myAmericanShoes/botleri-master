@@ -68,7 +68,7 @@ function postMessage(input) {
   
   if (input == "overlord") {
    
-    botResponse = "Ainz-Sama!"
+    botResponse = "Ainz-Sama!";
   }
   if (input == "reg") {
     
